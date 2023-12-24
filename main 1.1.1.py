@@ -42,6 +42,7 @@ def permision_level(admin_instance):
     for i in range(len(admin_instance.data)):
         if admin_instance.data[i]['Permission_level'] == "Admin":
             admins.append(i)
+    if len(admins) == 0: return True
     username_admin = input("Admin username: ")
     for i in admins:
         if admin_instance.data[i]['Username'] == username_admin:
